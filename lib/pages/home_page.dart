@@ -1,3 +1,5 @@
+import 'package:airbnb_clone/widgets/city_widgets.dart';
+import 'package:airbnb_clone/widgets/header.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/hero_banner.dart';
@@ -14,10 +16,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: [
-          const CustomScrollView(
-            slivers: [HeroBanner()],
-          )
+        children: const [
+          CustomScrollView(
+            slivers: [HeroBanner(), Header('Explore Nearby'), CitiesGrid()],
+          ),
         ],
       ),
     );
